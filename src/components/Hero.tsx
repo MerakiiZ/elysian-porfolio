@@ -12,8 +12,16 @@ function Hero() {
       />
 
         {/* Overlay Card */}
-      <div className="absolute inset-0 top-200 flex items-center justify-center z-5">
+      <div className="hidden md:flex absolute inset-0 top-200 items-center justify-center z-5">
         <AboutCard />
+      </div>
+
+       <div className="flex md:hidden absolute inset-0 items-center justify-center z-5">
+        <img
+          src="/assets/ABOUT CARD.png"
+          alt="About Card"
+          className="max-w-[90%] h-auto"
+        />
       </div>
     </section>
     )

@@ -1,7 +1,7 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './global.css'
-import App from '../components/App.tsx'
+import App from './App.tsx'
 import Navbar from '../components/Navbar.tsx'
 import Hero from '../components/Hero.tsx'
 
