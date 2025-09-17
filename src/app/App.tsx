@@ -1,13 +1,20 @@
 
 import '../app/global.css'
+import Navbar from '../components/Navbar.tsx'
+import Hero from '../components/Hero.tsx'
+import Footer from '../components/Footer.tsx'
+import TestContent from '../components/TestContent.tsx'
 
 function App() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <h1 className="text-4xl font-orbit text-indigo-600">
-        Hello React + Tailwind CSS v4!
-      </h1>
-    </div>
+    <main className="relative min-h-screen bg-elysian1">
+       <div className="flex flex-col gap-32">
+        <Navbar />
+        <Hero />
+        <TestContent />
+        <Footer />
+      </div>
+    </main>
   )
 }
 

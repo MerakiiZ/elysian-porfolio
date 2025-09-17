@@ -1,5 +1,5 @@
 import "../app/global.css";
-import TiltCard from "./TIltCard.tsx";
+import TiltCard from "./TiltCard.tsx";
 
 function Card() {
     return(

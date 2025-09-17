@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Orbit&family=Orbitron:wght@400..900&display=swap');
+@import url('https:
 @import "tailwindcss";
 
 @layer utilities {
@@ -18,3 +18,56 @@
     font-family: 'Audiowide', cursive;
   }
 }
+
+
+@layer utilities{
+  .bg-elysian::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url('public/assets/bg texture.png');
+    background-size: 30%, cover;
+    background-position: center;
+    background-repeat: repeat;
+    opacity: 0.15;
+    z-index: -1;
+  }
+
+
+  .bg-elysian1 {
+    position: relative;
+    background-color: #f8f8f8;
+    background-image: radial-gradient(hsla(0, 6%, 33%, 0.5) 0.5px, transparent 0.5px);
+    background-size: 15px 15px;
+  }
+
+  .bg-elysian1::before,
+  .bg-elysian1::after {
+   content: '';
+  position: absolute;
+  z-index: -1;
+  background-color: #e8c7c7;
+  border-radius: 50%;
+  opacity: 0.6;
+  filter: blur(90px);
+  }
+
+ 
+  .bg-elysian1::before {
+   width: 50vw;
+  height: 30vw;
+  top: -10%;
+  right: -15%;
+  transform: rotate(20deg);
+  }
+
+ 
+  .bg-elysian1::after {
+ width: 45vw;
+  height: 25vw;
+  top: 40%;
+  left: -20%;
+  }
+}
+
+
