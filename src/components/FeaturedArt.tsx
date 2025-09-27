@@ -1,4 +1,9 @@
+"use client";
+
 import "../app/global.css"
+import { useState } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+
 
 export default function FeaturedArt(){
     return (

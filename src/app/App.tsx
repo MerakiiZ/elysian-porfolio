@@ -12,8 +12,6 @@ function App() {
        <div className="flex flex-col gap-32">
         <Navbar />
         <Hero />.
-        <FeaturedArt />
-        <TestContent />
         <Footer />
       </div>
     </main>
