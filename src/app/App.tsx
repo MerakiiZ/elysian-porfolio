@@ -1,9 +1,11 @@
 
 import '../app/global.css'
+import { Canvas } from '@react-three/fiber'
+import { OrbitControls } from '@react-three/drei'
+import { FloatingContainer } from '../components/FloatingContainer.tsx'
 import Navbar from '../components/Navbar.tsx'
 import Hero from '../components/Hero.tsx'
 import Footer from '../components/Footer.tsx'
-import TestContent from '../components/TestContent.tsx'
 import FeaturedArt from '../components/FeaturedArt.tsx'
 
 function App() {
@@ -12,6 +14,7 @@ function App() {
        <div className="flex flex-col gap-32">
         <Navbar />
         <Hero />.
+        <FeaturedArt/>
         <Footer />
       </div>
     </main>
