@@ -4,7 +4,7 @@ import AboutCard from './AboutCard.tsx'
 
 function Hero() {
     return (
-        <section className="relative w-full h-[1022px] ">
+        <section className="relative w-full lg:h-[1022px] h-[750px]">
             <img
         src="/images/Ruby Zayne no wm.webp"
         alt="Hero"
@@ -20,7 +20,7 @@ function Hero() {
         <img
           src="/assets/ABOUT CARD.png"
           alt="About Card"
-          className="max-w-[90%] h-auto"
+          className="mt-40 max-w-full h-auto"
         />
       </div>
     </section>

@@ -23,14 +23,14 @@ export default function FeaturedArtworks() {
   useEffect(() => {
     const timer = setInterval(() => {
       setIndex((prev) => (prev + 1) % artworks.length);
-    }, 5000); // 5 seconds
+    }, 10000); // 10 seconds
     return () => clearInterval(timer);
   }, []);
 
   return (
-    <div className="relative w-full max-w-2xl mx-auto">
+    <div className="relative w-full max-w-full lg:max-w-5xl mx-auto">
       {/* Carousel Container */}
-      <div className="relative overflow-hidden rounded-2xl shadow-xl w-full h-[350px] bg-gray-100">
+      <div className="relative overflow-hidden lg:rounded-2xl shadow-xl w-full h-[550px] lg:h-[450px] bg-gray-100">
         <AnimatePresence mode="wait">
           <motion.img
             key={artworks[index]}
@@ -45,18 +45,18 @@ export default function FeaturedArtworks() {
         </AnimatePresence>
       </div>
 
-        {/* Label Overlay */}
+      {/* Label Overlay */}
         <motion.img
           src={labelImage}
           alt="Featured Artworks Label"
-          className="absolute bottom-1 w-1/2 h-auto mb-4"
+          className="lg:-left-10 absolute bottom-6 lg:bottom-1 lg:w-1/2 h-auto mb-4"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.5 }}
         />
 
       {/* Controls (Arrows + Lines + Button) */}
-      <div className="flex items-center justify-between mt-2">
+      <div className="ml-4 lg:ml-4 flex items-center justify-between mt-2">
         {/* Left Side: Arrows + Line Indicators */}
         <div className="flex items-center gap-3">
           {/* Left Arrow */}
@@ -73,7 +73,7 @@ export default function FeaturedArtworks() {
             {artworks.map((_, i) => (
               <div
                 key={i}
-                className={`h-[2px] w-6 rounded-full transition-all ${
+                className={`h-[2px] w-3 rounded-full transition-all ${
                   i === index ? "bg-red-900" : "bg-gray-300"
                 }`}
               />
@@ -92,11 +92,11 @@ export default function FeaturedArtworks() {
 
         {/* Right Side: More Art Button */}
         <motion.button
-          className="cursor-pointer px-15 py-1 relative bg-[#652526]/70 bg-linear-29 rounded-bl-[30px] shadow-[11px_10px_5.5px_0px_rgba(0,0,0,0.25)] outline-1 outline-amber-600 overflow-hidden hover:scale-105 transition
-          font-cormorant text-white"
+          className="cursor-pointer mt-3 mr-2 px-15 py-2 lg:py-1 relative bg-[#652526]/70 bg-linear-29 rounded-bl-[30px] shadow-[11px_10px_5.5px_0px_rgba(0,0,0,0.25)] outline-1 outline-amber-600 overflow-hidden hover:scale-105 transition
+          font-cormorant text-white text-lg"
           whileHover={{ y: -2 }}
         >
-          More Art
+          MORE ART
         </motion.button>
       </div>
     </div>

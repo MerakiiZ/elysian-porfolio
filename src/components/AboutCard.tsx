@@ -54,7 +54,7 @@ export default function AboutCard() {
 
       {/* Portrait */}
       <img
-        src="/assets/portrait.png"
+        src="/assets/portrait1.png"
         className="absolute left-15 top-13 w-1/3"
         style={{
           transform: `rotateX(${rotateX * 1.1}deg) rotateY(${rotateY * 1.1}deg) translateZ(20px)`,

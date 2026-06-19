@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-import { useFrame, type RootState } from '@react-three/fiber';
+import { useFrame } from '@react-three/fiber';
 import { Html } from '@react-three/drei';
 import { Group } from 'three';
 
@@ -18,12 +18,8 @@ export function FloatingContainer({ position, rotation = [0, 0, 0] }: FloatingCo
   const groupRef = useRef<Group>(null!);
 
   // Add types for the useFrame callback arguments
-  useFrame((state: RootState, delta: number) => {
-    const elapsedTime = state.clock.getElapsedTime();
-    
-    // The ref's `current` property is now correctly typed as a Group
-    // groupRef.current.position.y = position[1] + Math.sin(elapsedTime * 0.7) * 0.15;
-    // groupRef.current.rotation.y += 0.002;
+  useFrame((state) => {
+    state.clock.getElapsedTime();
   });
 
   return (
